@@ -1,0 +1,127 @@
+  iframe {
+	
+height:70vh;
+width:70%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #7BBAB8; 
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+img { 
+float: left;
+margin-right: 20px;
+width: 10%;
+height: 10%;
+} 
+th { width: 500px;}
+ul {
+  list-style-image: url(puce-zelda.png); /* image comme puce attention à l’esthétique */
+}
+
+
+#entete-de-page {
+	padding: 5px;
+	height: 100px;
+	background-color:#39755F;
+	font-size: 32px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+}
+#bloc-menu {
+	height: 36px;
+	background-color:#4A568A;
+	float: center;
+	color: white;
+}
+#contenu {
+	padding: 10px;
+	background-color:  
+#66BAB2
+;
+	color:#163880;
+}
+#infos {
+	color: #163880;
+	font-style: italic;
+}
+#pied-de-page {
+	padding: 5px;
+	background-color: #9EC773;
+	font-size: 11px;
+}
+
+.bouton.active {
+Color:#9D08F3;
+}	
+
+.bouton {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 400;
+	color: #f34808;
+	font-size: 4rem;
+	line-height: 2em;
+	margin: 0 20px; /* espace entre les boutons */
+}
+
+/*mettre une image aux bords arrondis*/
+
+.arrondie {
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+border-radius:7px;
+}
+
+.arrondie1 {
+-moz-border-radius:100px;
+-webkit-border-radius:100px;
+border-radius:100px;
+}
+
+a:link {
+  color:#163880;
+  text-decoration: none;
+}
+
+a:visited {
+  color:  #18042E;
+  text-decoration: none;
+}
+
+
+a:hover {
+ color: #FFFFFF;
+ text-decoration: none;
+ 
+}
+
+a:active {
+    color: #601EBD;
+	 text-decoration: none;
+}
+.petit-texte{ 
+font-size: 15px; }
+.petite-image{
+width:300px;}
+
+/* Ajoute une manette avant chaque paragraphe des passions */
+#contenu p::before {
+  content: "🎮 ";
+  margin-right: 6px;
+}
+
+/* Image Fortnite en dessous des passions */
+#image-fortnite {
+  display: block;
+  max-width: 420px;     /* s'adapte, tu peux changer */
+  width: 100%;
+  border-radius: 16px;  /* bords arrondis */
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15); /* (optionnel) ombre douce */
+  margin: 16px 0 0;     /* espace au-dessus */
+}
