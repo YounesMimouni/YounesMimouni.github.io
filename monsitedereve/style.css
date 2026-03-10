@@ -1,0 +1,84 @@
+/* === Palette vive (accent vert clair) === */
+:root{
+  --bg: #071a12;            /* vert très sombre */
+  --bg2: #0a2b1b;           /* vert foncé dégradé */
+  --panel: rgba(255,255,255,.06);
+  --panel-border: rgba(255,255,255,.12);
+  --text: #f0fff4;          /* blanc légèrement verdâtre */
+  --muted: #c7f9cc;         /* vert menthe pâle */
+  --primary: #32f27b;       /* VERT CLAIR flashy */
+  --primary-strong: #10d867;/* vert lumineux */
+  --link: #7ef9c6;          /* vert aqua clair */
+  --link-hover: #ffffff;    /* survol blanc */
+  --accent-2: #00e5ff;      /* cyan vibrant (léger) */
+}
+
+/* === Reset simple === */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(50,242,123,.18), transparent 60%),
+              radial-gradient(1000px 500px at 90% 10%, rgba(0,229,255,.14), transparent 60%),
+              linear-gradient(160deg, var(--bg), var(--bg2) 60%);
+  min-height:100vh;
+  display:flex; flex-direction:column;
+}
+
+/* === Header & nav === */
+.site-header{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(6px); z-index:5}
+.nav{
+  display:flex; align-items:center; gap:1rem;
+  padding:.8rem 1rem; border-bottom:1px solid var(--panel-border);
+  background: rgba(7,26,18,.6);
+}
+.nav a{color:var(--link); text-decoration:none; font-weight:700}
+.nav a:hover{color:var(--link-hover)}
+.nav .brand{color:#fff; font-weight:900; letter-spacing:.3px}
+.nav .spacer{flex:1}
+
+/* === Layout === */
+.container{width:min(100%, 960px); margin-inline:auto; padding: 1.5rem;}
+.hero h1{margin:.2rem 0 .6rem 0; font-size: clamp(1.6rem, 2.2vw + 1rem, 2.5rem)}
+.hero p{color:var(--muted)}
+
+/* === Cards === */
+.card{
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px; padding: 1.2rem; margin: 1rem 0 2rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 1px rgba(50,242,123,.06) inset;
+}
+.card h2{margin-top:0}
+.hint{color:var(--muted); font-size:.92rem}
+
+/* === Boutons === */
+.btn{
+  background: linear-gradient(180deg, var(--primary), var(--primary-strong));
+  border: none; color:#052010; font-weight:800; text-transform:uppercase; letter-spacing:.3px;
+  padding: .6rem 1rem; border-radius: 14px; cursor:pointer;
+  transition: transform .08s ease, box-shadow .2s ease, filter .15s ease;
+  box-shadow: 0 10px 24px rgba(16,216,103,.35);
+}
+.btn:hover{transform: translateY(-1px); filter: brightness(1.05)}
+.btn:active{transform: translateY(0)}
+.btn-outline{background:transparent; color:var(--primary); border:2px solid var(--primary)}
+.status{margin-left:.25rem; color:var(--muted)}
+
+/* === Audio & vidéo === */
+.video-wrapper video{width:100%; height:auto; border-radius:16px; border: 1px solid var(--panel-border)}
+
+/* === Grille images Japon === */
+.grid-2{display:grid; grid-template-columns: 1fr; gap: 1.1rem}
+@media (min-width: 640px){ .grid-2{grid-template-columns: 1fr 1fr; gap: 1.3rem} }
+.img-card{margin:0}
+.img-card img{display:block; width:100%; height: 260px; object-fit:cover; border-radius:18px; border: 1px solid var(--panel-border)}
+.img-card figcaption{color:var(--muted); font-size:.9rem; margin-top:.4rem}
+
+/* === Footer === */
+.site-footer{margin-top:auto; padding:1rem; text-align:center; color:var(--muted)}
+
+/* === Liens === */
+a{transition: color .15s ease}
+a:hover{color:var(--link-hover)}
